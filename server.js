@@ -7,9 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Secret key for JWT (in production, use environment variable)
-const JWT_SECRET =
-  process.env.JWT_SECRET ||
-  "yBwvuXs0WKA569pddUraTqd2jUeXjPDyjqozuNHelj38XBjwDjcVtAgjWYkSONOdz";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Azure Function URLs (replace with your actual function URLs)
 const AZURE_FUNCTION_URLS = {
