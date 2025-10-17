@@ -192,8 +192,6 @@ app.listen(PORT, () => {
   console.log(`Auth middleware server running on port ${PORT}`);
   console.log(`Available routes: GET /get, POST /post`);
   console.log(`Login endpoint: POST /login`);
-  console.log(`Health check: GET /health`);
-  console.log(`Azure test: GET /test-azure`);
   console.log("\nAzure Function URLs:");
   Object.entries(AZURE_FUNCTION_URLS).forEach(([key, url]) => {
     console.log(`  ${key.toUpperCase()}: ${url}`);
