@@ -2,6 +2,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const axios = require("axios");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,12 +12,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 // Azure Function URLs (replace with your actual function URLs)
 const AZURE_FUNCTION_URLS = {
-  get:
-    process.env.AZURE_GET_URL ||
-    "https://restful-app-gjhagweudpfah6gp.canadacentral-01.azurewebsites.net/api/getTrigger?code=jwWyvHZP4P3mbpUOXvc6jLGskxRPDd-KfC0Hh0vORc7VAzFu9AcaEg==",
-  post:
-    process.env.AZURE_POST_URL ||
-    "https://restful-app-gjhagweudpfah6gp.canadacentral-01.azurewebsites.net/api/postTrigger?code=4qzeajsZvq1xY6f0rFt641J4imcEgha37Pt9Oi7KHWX5AzFurLP37w==",
+  get: process.env.AZURE_GET_URL,
+  post: process.env.AZURE_POST_URL,
 };
 
 // Middleware
